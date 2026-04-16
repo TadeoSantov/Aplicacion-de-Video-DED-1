@@ -20,7 +20,6 @@ export async function obtenerUsuarioporid(id){
         select:{
          nombre_de_usuario:true,
          id:true,
-         password: true,
          admin:true,
          facultad_id:true,
          facultad:{
@@ -65,7 +64,6 @@ export async function ObtenerTodos() {
     totalVideos: u._count.videos,
     tieneSesionActiva: u._count.sesiones > 0,
     Baja: u.baja,
-    password: u.password,
   }));
 }
 

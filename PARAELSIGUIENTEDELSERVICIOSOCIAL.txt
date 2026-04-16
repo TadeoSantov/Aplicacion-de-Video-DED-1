@@ -63,6 +63,10 @@ Realmente aqui no hay mucho que moverle, si quieres meter mano, quita los coment
 Cuando se mande a produccion asegurense de setear la variable de entorno > set NODE_ENV=production
 para que la seguridad se active(supongo que los encargados del hosteo y todo eso le saben)
 
+-- Seguridad (Actualización) --
+Se integró bcrypt para la encriptación de contraseñas. Los endpoints de creación y actualización ahora almacenan los hashes de las contraseñas, no el texto plano. 
+En los inicios de sesión, si el usuario tiene una contraseña en texto plano (legacy), el sistema automáticamente verificará su validez y migrará su contraseña al nuevo formato encriptado de forma transparente. ¡Esto no rompe a los usuarios existentes!
+
 ////TRABAJO REMOTO///
 Sí lo vas trabajarlo en otra pc debes tener instalado lo siguiente:
 -Node.js
